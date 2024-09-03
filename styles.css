@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Left Section (Logo and Text) */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Center Section (Menu) */
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+	font-family: Arial, sans-serif;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Right Section (Social Media Links) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin-left: 10px;
+}
+
+.social-icon img {
+    height: 25px;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Background Image with Zoom-Out Animation */
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: zoomOut 10s ease-in-out infinite;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 10s infinite;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-center {
+        margin: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
